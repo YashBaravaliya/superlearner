@@ -84,8 +84,6 @@ li a img,.setting{
     height: 100%;
     color: aliceblue;
     padding: 10px;
-    /* display: flex; */
-    /* flex-direction: column; */
     overflow-y: auto;
 }
 
