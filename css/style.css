@@ -74,9 +74,19 @@ li{
 
 li a img,.setting{
     height: 20px;
-    background: #fff;
+    background: #777;
     border-radius: 50%;
     padding: 5px;
+    transition: .3s;
+}
+
+li a img,.setting:active{
+
+    background-color: #fff;
+}
+
+li a img:hover{
+    background-color: #fff;
 }
 
 .center{
@@ -242,6 +252,7 @@ li a img,.setting{
     flex-direction: column;
     align-items: center;
     position: relative;
+    z-index: 100;
 }
   
 .contaner img{
@@ -297,6 +308,23 @@ li a img,.setting{
   }
 
 
+
+.pre-text{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+    position: absolute;
+    z-index: -10;
+    border-radius: 10px;
+    color: transparent;
+    /* display: none; */
+}
+
+.pre-text img{
+    visibility: hidden;
+}
+
 .right-bar{
     width: 24%;
     background: linear-gradient(75deg,#3D3872 10%, #232A43);
@@ -308,14 +336,12 @@ li a img,.setting{
 
 
 .img-box{
-    background: rgba( 255, 255, 255, 0.25 );
+    /* background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     border-radius: 10px;
     -webkit-backdrop-filter: blur( 4px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    height: 220px;
-    width: 220px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -332,5 +358,43 @@ li a img,.setting{
     padding: 10px;
     color: aliceblue;
     text-align: justify;
-    /* background: #000; */
+    background: #000;
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(33,33,33) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(0,0,0) 85%),linear-gradient(78deg, rgba(192, 192, 192,0.05) 0%, rgba(192, 192, 192,0.05) 50%,rgba(60, 60, 60,0.05) 50%, rgba(60, 60, 60,0.05) 100%),linear-gradient(227deg, rgba(97, 97, 97,0.05) 0%, rgba(97, 97, 97,0.05) 50%,rgba(52, 52, 52,0.05) 50%, rgba(52, 52, 52,0.05) 100%),linear-gradient(240deg, rgba(98, 98, 98,0.05) 0%, rgba(98, 98, 98,0.05) 50%,rgba(249, 249, 249,0.05) 50%, rgba(249, 249, 249,0.05) 100%),linear-gradient(187deg, rgba(1, 1, 1,0.05) 0%, rgba(1, 1, 1,0.05) 50%,rgba(202, 202, 202,0.05) 50%, rgba(202, 202, 202,0.05) 100%),linear-gradient(101deg, rgba(61, 61, 61,0.05) 0%, rgba(61, 61, 61,0.05) 50%,rgba(254, 254, 254,0.05) 50%, rgba(254, 254, 254,0.05) 100%),linear-gradient(176deg, rgba(237, 237, 237,0.05) 0%, rgba(237, 237, 237,0.05) 50%,rgba(147, 147, 147,0.05) 50%, rgba(147, 147, 147,0.05) 100%),linear-gradient(304deg, rgba(183, 183, 183,0.05) 0%, rgba(183, 183, 183,0.05) 50%,rgba(57, 57, 57,0.05) 50%, rgba(57, 57, 57,0.05) 100%),radial-gradient(circle at center center, hsl(351,4%,12%),hsl(351,4%,12%));
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px;
+    width: 18vw;
+
+}
+
+.right-bar .content img{
+    max-height: 50%;
+    max-width: 50%;
+    visibility: visible;
+
+}
+
+.eye-box:hover{
+    animation:  shake 0.8s  ;
+}
+
+@keyframes shake{
+    0%{
+    transform: translateX(0)
+    }
+    25%{
+    transform: translateX(15px);
+    }
+    
+    50%{
+    transform: translateX(-15px);
+    }
+    100%{
+    transform: translateX(0px);
+    }
 }
