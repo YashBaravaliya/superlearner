@@ -4,6 +4,7 @@
     position: relative;
     border-radius: 50%;
     animation: fly 3s linear infinite;
+    /* background: #000; */
 }
 
 @keyframes fly{

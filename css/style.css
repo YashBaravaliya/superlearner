@@ -72,7 +72,13 @@ li{
     height: 30px;
 }
 
-li a img,.setting{
+.mobile-nav{
+    display: none;
+}
+
+
+
+li a img,.setting,.menu{
     height: 20px;
     background: #777;
     border-radius: 50%;
@@ -280,7 +286,7 @@ li a img:hover{
     width: 170px;
 }
   
-.contaner button {
+.contaner .started {
     margin-top: 30px;
     border-radius: .25rem;
     text-transform: uppercase;
@@ -300,7 +306,7 @@ li a img:hover{
     overflow: hidden;
   }
   
- .contaner button:hover {
+ .contaner .started:hover {
     cursor: pointer;
     transition: all .3s ease-in;
     padding-right: 20px;
@@ -315,9 +321,10 @@ li a img:hover{
     background: transparent;
     overflow: hidden;
     position: absolute;
-    z-index: -10;
+    z-index: -1;
     border-radius: 10px;
     color: transparent;
+
     /* display: none; */
 }
 
@@ -369,6 +376,7 @@ li a img:hover{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 10px;
     width: 18vw;
+    overflow-y: auto;
 
 }
 
